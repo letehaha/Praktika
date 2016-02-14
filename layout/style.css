@@ -1,0 +1,210 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, 
+h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, 
+del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, 
+sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, 
+label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, 
+aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary, time, mark, audio, video, main {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: 'Lato', sans-serif;
+}
+body{
+	background-color: #141313;
+	width: 100%;
+	height: 100%;
+	font-size: 16px;
+	line-height: 1.6;
+}
+h1, h2, h3, a, p{
+	color: #E0DCE8;
+}
+a{
+	text-decoration: none;
+}
+.container{
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+header .h-search{
+	max-width: 500px;
+	height: 100%;
+	display: block;
+	margin: 0 auto;
+}
+header .h-search::after{
+	content: " ";
+  	clear: both;
+  	display: table;
+}
+header .random-button, .search-button{
+	width: 50%;
+	display: block;
+	text-align: center;
+}
+header .random-button{
+	float: left;
+}
+header .search-button{
+	float: right;
+}
+header input {
+	width: 100%;
+	padding: 20px;
+	font-size: 25px;
+	border: none;
+	background-color: #7A7474;
+	opacity: 0.3;
+	color: white;
+}
+header input:hover{opacity: 1;}
+
+main{
+	width: 70%;
+	display: inline-block;
+}
+main .film-info{
+
+}
+main .name-film{
+	display: block;
+	padding: 5px 0 10px 5px;
+}
+
+main .poster{
+	display: inline-block;
+	padding: 0 0 0 5px;
+	float: left;
+}
+main .poster img{
+	padding: 0 15px 10px 0;
+	width: 155px;
+	height: 210px;
+}
+main .poster p{
+	font-size: 12px;
+}
+main .film-info::after{
+	content: " ";
+  	clear: both;
+  	display: table;
+}
+
+main section{
+	
+}
+main section ul.tabs{
+	list-style: none;
+    padding: 0px;
+}
+/*.tabs li{
+	float: left;
+    display: inline;
+    list-style: none;
+    cursor: pointer;
+    padding: 0 20px;
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: #000 1px 1px 1px;
+    color: rgb(201, 201, 201);
+    height: 28px;
+}*/
+.tabs {
+    width: 500px;
+    height: 300px;
+}
+.tabs ul,
+.tabs li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.tabs,
+.tabs input[type="radio"]:checked + label {
+    position: relative;
+}
+.tabs li,
+.tabs input[type="radio"] + label {
+    display: inline-block;
+}
+.tabs li > video,
+.tabs input[type="radio"] {
+    position: absolute;
+}
+.tabs li > video,
+.tabs input[type="radio"] + label {
+    border: solid 1px #141313;
+}
+.tabs {
+	font: normal 11px Arial, Sans-serif;
+    color: #141313;
+}
+.tabs li {
+    vertical-align: top;
+    text-shadow: #000 1px 1px 1px;
+    color: rgb(201, 201, 201);
+    font-size: 20px;
+}
+.tabs li:first-child {
+    margin-left: 8px;
+}
+.tabs li > video {
+    top: 33px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 8px;
+    overflow: auto;
+    background: #141313;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.tabs input[type="radio"] + label {
+    margin: 0 2px 0 0;
+    padding: 0 18px;
+    line-height: 32px;
+    background: #141313;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.tabs input[type="radio"]:checked + label {
+    z-index: 1;
+    background: #141313;
+    border-bottom-color: #141313;
+    cursor: default;
+}
+.tabs input[type="radio"] {
+    opacity: 0;
+}
+.tabs input[type="radio"] ~ video {
+    display: none;
+}
+.tabs input[type="radio"]:checked:not(:disabled) ~ video {
+    display: block;
+}
+.tabs input[type="radio"]:disabled + label {
+    opacity: .5;
+    cursor: no-drop;
+}
+/*main .watch-film .trailer video{
+	width: 500px;
+	height: 300px;
+}*/
+/*main h2{
+	font-size: 12px;
+	display: inline-block;
+}
+main .poster{
+	display: inline-block;
+}*/

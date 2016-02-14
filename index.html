@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Cinema</title>
+	<script></script>
+	<link rel="stylesheet" href="layout/style.css">
+	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+</head>
+<body class="container">
+	<header>
+		<div class="h-search">
+			<div class="random-button">
+				<input type="button" name="random-search" value="Случайный фильм">
+			</div>
+			<div class="search-button">
+				<input type="button" name="search" value="Поиск">
+				<span></span>
+			</div>
+		</div>
+	</header>
+
+	<main>
+
+		<div class="film-info">
+			<div class="name-film">
+				<h1> Звездные войны: Эпизод 7 – Пробуждение силы (2015)</h1>
+			</div>
+			<div class="poster">
+				<img src="img/poster.png" alt="poster" align="left">
+				<p>
+					Давным-давно, в далекой-далекой галактике судьбы множества планет определялись балансом «силы», энергетического поля, управление которым было подвластно немногим рыцарям-джедаям. В зависимости от выбираемого ими пути духовного развития и стороны силы, Светлой или Темной, джедаи способствовали поддержанию в галактике мира и порядка или, напротив, поддавались эгоистичным стремлениям и вносили в нее раздор и хаос. 
+					<br>
+					После того, как Энакин Скайуокер и его дети сыграли свою роль в восстановлении баланса силы, прошло уже 30 лет. Старые войны отгремели в галактике, но на планеты надвигается новая опасность. Сила пробуждается, и те, кому она подвластна, готовятся использовать ее в собственных целях. Вечная борьба между Светом и Тьмой вот-вот продолжится вновь под небесами не одной планеты, и на чьей стороне победа окажется на этот раз, не известно даже мудрейшим обитателям галактики, которые еще помнят сражения затяжной галактической гражданской войны.
+				</p>
+			</div>
+		</div>
+		
+		<section class="watch-film">
+
+		<div class="tabs">
+  			<ul>
+    			<li>
+     				<input type="radio" name="tabs-0" checked="checked" id="tabs-0-0" />
+        			<label for="tabs-0-0">Смотреть фильм</label>
+     				
+     					<video width="500px" height="300px" controls="controls" preload="none" poster="video/trailer_poster.jpg">
+							<source src="video/trailer_SW.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+						</video>
+    				
+   				</li>
+   				<li>
+     				<input type="radio" name="tabs-0" id="tabs-0-1" />
+       				<label for="tabs-0-1">Трейлер</label>
+     				
+     					<video width="500px" height="300px" controls="controls" preload="none">
+							<source src="video/lala.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+						</video>
+    				
+    			</li>
+  			</ul>
+		</div>
+
+
+<!-- 			<div class="tab">
+				<input type="radio" name="tab" id="tab-1">
+				<label for="tab-1"></label>
+				<input type="radio" name="tab" id="tab-2">
+				<label for="tab-2"></label>
+
+				<div class="content">
+					<article class="tab-1">
+						
+					</article>
+					<article class="tab-2">
+						
+					</article>
+					<article class="tab-3">
+						
+					</article>
+				</div>
+
+
+			</div> -->
+			<!-- <ul class="tabs">
+				<li>Смотреть</li>
+				<li>Трейлер</li>
+			</ul>
+			<div class="trailer">
+				<video width="500px" height="300px" controls="controls" preload="none" poster="video/trailer_poster.jpg">
+					<source src="video/trailer_SW.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+				</video>
+			</div>
+			<div class="film"></div> -->
+		</section>
+	</main>
+	<section>
+
+		<div class="comments"></div>
+
+	</section>
+
+</body>
+</html>

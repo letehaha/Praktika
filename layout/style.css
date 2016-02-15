@@ -13,6 +13,9 @@ menu, nav, output, ruby, section, summary, time, mark, audio, video, main {
     vertical-align: baseline;
     font-family: 'Lato', sans-serif;
 }
+button:active, button:focus {
+  outline: none;
+}
 body{
 	background-color: #141313;
 	width: 100%;
@@ -31,17 +34,21 @@ a{
 	margin: 0 auto;
 }
 
+/*------------  BUTTONS  -------------*/
+
 header .h-search{
 	max-width: 500px;
 	height: 100%;
 	display: block;
 	margin: 0 auto;
+    position: relative;
 }
 header .h-search::after{
 	content: " ";
   	clear: both;
   	display: table;
 }
+
 header .random-button, .search-button{
 	width: 50%;
 	display: block;
@@ -49,22 +56,30 @@ header .random-button, .search-button{
 }
 header .random-button{
 	float: left;
+    border-right: solid 2px black;
 }
 header .search-button{
 	float: right;
+    position: relative;
 }
-header input {
+header button i{
+    padding-left: 30px;
+}
+header button {
 	width: 100%;
-	padding: 20px;
+	padding: 20px 10px 20px 10px;
 	font-size: 25px;
 	border: none;
 	background-color: #7A7474;
 	opacity: 0.3;
 	color: white;
 }
-header input:hover{opacity: 1;}
+header button:hover{opacity: 1;}
+
+/*-------------------------*/
 
 main{
+    float: left;
 	width: 70%;
 	display: inline-block;
 }
@@ -118,6 +133,7 @@ main section ul.tabs{
 .tabs {
     width: 500px;
     height: 300px;
+    margin: 0 auto;
 }
 .tabs ul,
 .tabs li {
@@ -197,14 +213,11 @@ main section ul.tabs{
     opacity: .5;
     cursor: no-drop;
 }
-/*main .watch-film .trailer video{
-	width: 500px;
-	height: 300px;
-}*/
-/*main h2{
-	font-size: 12px;
-	display: inline-block;
+
+section .comments{
+    float: right;
+    width: 25%;
+    height: 500px;
+    background-color: red;
+    margin-top: 90px;
 }
-main .poster{
-	display: inline-block;
-}*/

@@ -220,6 +220,11 @@ section .comments{
     float: right;
     width: 40%;
     height: 525px;
-    background-color: red;
+    background-color: #7A7474;
     margin-top: 50px;
+    opacity: 0.3;
+    color: white;
+}
+section .comments:hover{
+    opacity: 1;
 }

@@ -12,7 +12,12 @@
 	<header>
 		<div class="h-search">
 			<button class="random-button">Случайный фильм</button>
-			<button class="search-button">Поиск<i class="fa fa-search"></i></button>
+			<button class="search-button">
+				<form>Поиск фильма:
+      				<input value="{{ guestbook_name }}" name="guestbook_name">
+      				<!--<input type="submit" value="switch">-->
+    			</form>
+			</button>
 		</div>
 	</header>
 <!-- УЫЫЫЫ -->
@@ -22,7 +27,7 @@
 				<h1> Звездные войны: Эпизод 7 – Пробуждение силы (2015)</h1>
 			</div>
 			<div class="poster">
-				<img src="img/poster.png" alt="poster" align="left">
+				<img src="https://github.com/DimaMorgun/Praktika/blob/master/img/poster.png?raw=true" alt="poster" align="left">
 				<p>
 					Давным-давно, в далекой-далекой галактике судьбы множества планет определялись балансом «силы», энергетического поля, управление которым было подвластно немногим рыцарям-джедаям. В зависимости от выбираемого ими пути духовного развития и стороны силы, Светлой или Темной, джедаи способствовали поддержанию в галактике мира и порядка или, напротив, поддавались эгоистичным стремлениям и вносили в нее раздор и хаос. 
 					<br>
@@ -68,8 +73,12 @@
     		{% endfor %}
 		
 			<form action="/sign?guestbook_name={{ guestbook_name }}" method="post">
-      			<div><textarea name="content" rows="1" cols="73" placeholder="Поделитесь своим мнением с другими"></textarea></div>
-      			<div><input type="submit" value="Отправить сообщение"></div>
+      			<div>
+      				<textarea name="content" rows="1" cols="73" {% if url_linktext == "Login"%}placeholder="Войдите через свою учетную запись что бы отправиль сообщение!!!"{% else %}placeholder="Поделитесь своим мнением с другими"{%endif%} {% if url_linktext == "Login"%}disabled{%endif%}></textarea>
+      				</div>
+      			<div>
+      			<input type="submit" value="Отправить сообщение" {% if url_linktext == "Login"%}disabled{%endif%}></div>
+      			<a href="{{ url|safe }}">{{ url_linktext }}</a>
     		</form>
 
 		</div>

@@ -13,6 +13,7 @@ menu, nav, output, ruby, section, summary, time, mark, audio, video, main {
     vertical-align: baseline;
     font-family: 'Lato', sans-serif;
 }
+html,body {overflow-y:hidden}
 button:active, button:focus {
   outline: none;
 }
@@ -219,6 +220,11 @@ section .comments{
     float: right;
     width: 40%;
     height: 525px;
-    background-color: red;
+    background-color: #7A7474;
     margin-top: 50px;
+    opacity: 0.3;
+    color: white;
+}
+section .comments:hover{
+    opacity: 1;
 }

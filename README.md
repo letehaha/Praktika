@@ -1,7 +1,3 @@
 # Praktika
-<<<<<<< HEAD
-# блаблабла
-# Пажалуйста хоспаде пусти
-=======
-#блаблабла
->>>>>>> ef36b728c8440aeeb40898441da03cd05f3fa5f6
+# RedGitTeam
+# GoodLuck GoodNight

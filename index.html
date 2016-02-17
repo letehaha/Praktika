@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Cinema</title>
+	<script></script>
+	<link rel="stylesheet" href="layout/style.css">
+	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.css">
+</head>
+<body class="container">
+	<header>
+		<div class="h-search">
+			<button class="random-button">Случайный фильм</button>
+			<button class="search-button">Поиск<i class="fa fa-search"></i></button>
+		</div>
+	</header>
+<!-- УЫЫЫЫ -->
+	<main>
+		<div class="film-info">
+			<div class="name-film">
+				<h1> Звездные войны: Эпизод 7 – Пробуждение силы (2015)</h1>
+			</div>
+			<div class="poster">
+				<img src="img/poster.png" alt="poster" align="left">
+				<p>
+					Давным-давно, в далекой-далекой галактике судьбы множества планет определялись балансом «силы», энергетического поля, управление которым было подвластно немногим рыцарям-джедаям. В зависимости от выбираемого ими пути духовного развития и стороны силы, Светлой или Темной, джедаи способствовали поддержанию в галактике мира и порядка или, напротив, поддавались эгоистичным стремлениям и вносили в нее раздор и хаос. 
+					<br>
+					<br>
+					После того, как Энакин Скайуокер и его дети сыграли свою роль в восстановлении баланса силы, прошло уже 30 лет. Старые войны отгремели в галактике, но на планеты надвигается новая опасность. Сила пробуждается, и те, кому она подвластна, готовятся использовать ее в собственных целях. Вечная борьба между Светом и Тьмой вот-вот продолжится вновь под небесами не одной планеты, и на чьей стороне победа окажется на этот раз, не известно даже мудрейшим обитателям галактики, которые еще помнят сражения затяжной галактической гражданской войны.
+				</p>
+			</div>
+		</div>
+		<section class="watch-film">
+		<div class="tabs">
+  			<ul>
+    			<li>
+     				<input type="radio" name="tabs-0" checked="checked" id="tabs-0-0" />
+        			<label for="tabs-0-0">Смотреть фильм</label>
+     				
+     					<iframe width="600" height="315" src="https://www.youtube.com/embed/sGbxmsDFVnE" frameborder="0" allowfullscreen></iframe>
+   				</li>
+   				<li>
+     				<input type="radio" name="tabs-0" id="tabs-0-1" />
+       				<label for="tabs-0-1">Трейлер</label>
+              
+     					<iframe width="600" height="315" src="https://www.youtube.com/embed/lN7dkSIgYgE" frameborder="0" allowfullscreen></iframe>
+    			</li>
+  			</ul>
+		</div>
+		</section>
+	</main>
+
+	<section>
+
+		<div class="comments">
+			{% for greeting in greetings %}
+      			{% if greeting.author %}
+        			<b>{{ greeting.author.email }}
+          				{% if user and user.user_id() == greeting.author.identity %}
+            				(You)
+          				{% endif %}
+        			</b> wrote:
+      			{% else %}
+       				Анонимный пользователь написал:
+      			{% endif %}
+      			<blockquote>{{ greeting.content }}</blockquote>
+    		{% endfor %}
+		
+			<form action="/sign?guestbook_name={{ guestbook_name }}" method="post">
+      			<div><textarea name="content" rows="1" cols="73" placeholder="Поделитесь своим мнением с другими"></textarea></div>
+      			<div><input type="submit" value="Отправить сообщение"></div>
+    		</form>
+
+		</div>
+
+	</section>
+
+</body>
+</html>

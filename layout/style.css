@@ -225,6 +225,10 @@ section .comments{
     opacity: 0.3;
     color: white;
 }
+
 section .comments:hover{
     opacity: 1;
+}
+
+textarea { resize: vertical; 
 }

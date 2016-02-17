@@ -30,17 +30,17 @@ a{
 	text-decoration: none;
 }
 .container{
-	max-width: 1280px;
+	max-width: 98%;
 	margin: 0 auto;
 }
 
 /*------------  BUTTONS  -------------*/
 
 header .h-search{
-	max-width: 500px;
+	width: 40%;
 	height: 100%;
 	display: block;
-	margin: 0 auto;
+	float: right;
     position: relative;
 }
 header .h-search::after{
@@ -80,13 +80,14 @@ header button:hover{opacity: 1;}
 
 main{
     float: left;
-	width: 70%;
+	width: 59%;
 	display: inline-block;
 }
 main .film-info{
 
 }
 main .name-film{
+    font-size: 1.75em;
 	display: block;
 	padding: 5px 0 10px 5px;
 }
@@ -131,8 +132,7 @@ main section ul.tabs{
     height: 28px;
 }*/
 .tabs {
-    width: 500px;
-    height: 300px;
+    height: 350px;
     margin: 0 auto;
 }
 .tabs ul,
@@ -216,8 +216,8 @@ main section ul.tabs{
 
 section .comments{
     float: right;
-    width: 25%;
-    height: 500px;
+    width: 40%;
+    height: 550px;
     background-color: red;
-    margin-top: 90px;
+    margin-top: 50px;
 }

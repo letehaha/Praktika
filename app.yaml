@@ -1,0 +1,19 @@
+application: practica
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+# Handlers match in order, put above the default handler.
+handlers:
+- url: /layout
+  static_dir: layout
+
+- url: /.*
+  script: main.app
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest

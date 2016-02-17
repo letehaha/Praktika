@@ -149,11 +149,11 @@ main section ul.tabs{
 .tabs input[type="radio"] + label {
     display: inline-block;
 }
-.tabs li > video,
+.tabs li > iframe,
 .tabs input[type="radio"] {
     position: absolute;
 }
-.tabs li > video,
+.tabs li > iframe,
 .tabs input[type="radio"] + label {
     border: solid 1px #141313;
 }
@@ -170,7 +170,7 @@ main section ul.tabs{
 .tabs li:first-child {
     margin-left: 8px;
 }
-.tabs li > video {
+.tabs li > iframe {
     top: 33px;
     bottom: 0;
     left: 0;
@@ -203,10 +203,10 @@ main section ul.tabs{
 .tabs input[type="radio"] {
     opacity: 0;
 }
-.tabs input[type="radio"] ~ video {
+.tabs input[type="radio"] ~ iframe {
     display: none;
 }
-.tabs input[type="radio"]:checked:not(:disabled) ~ video {
+.tabs input[type="radio"]:checked:not(:disabled) ~ iframe {
     display: block;
 }
 .tabs input[type="radio"]:disabled + label {

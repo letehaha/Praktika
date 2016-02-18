@@ -282,3 +282,9 @@ section form .link-login{
 section form .link-login a{
     margin-left: 80px;
 }
+small{
+    float: right;
+    color: #e74c3c;
+    font-size: 12px;
+    letter-spacing:1px;
+}

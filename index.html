@@ -59,7 +59,17 @@
 	<section>
 
 		<div class="comments">
-			{% for greeting in greetings %}
+		
+			<form action="/sign?guestbook_name={{ guestbook_name }}" method="post">
+      			<div>
+      				<textarea name="content" rows="1" cols="73" {% if url_linktext == "Login"%}placeholder="Войдите через свою учетную запись что бы отправиль сообщение!!!"{% else %}placeholder="Поделитесь своим мнением с другими"{%endif%} {% if url_linktext == "Login"%}disabled{%endif%}></textarea>
+      				</div>
+      			<div>
+      			<input type="submit" value="Отправить сообщение" {% if url_linktext == "Login"%}disabled{%endif%}></div>
+      			<a href="{{ url|safe }}">{{ url_linktext }}</a>
+    		</form>
+
+    		{% for greeting in greetings %}
       			{% if greeting.author %}
         			<b>{{ greeting.author.email }}
           				{% if user and user.user_id() == greeting.author.identity %}
@@ -71,15 +81,6 @@
       			{% endif %}
       			<blockquote>{{ greeting.content }}</blockquote>
     		{% endfor %}
-		
-			<form action="/sign?guestbook_name={{ guestbook_name }}" method="post">
-      			<div>
-      				<textarea name="content" rows="1" cols="73" {% if url_linktext == "Login"%}placeholder="Войдите через свою учетную запись что бы отправиль сообщение!!!"{% else %}placeholder="Поделитесь своим мнением с другими"{%endif%} {% if url_linktext == "Login"%}disabled{%endif%}></textarea>
-      				</div>
-      			<div>
-      			<input type="submit" value="Отправить сообщение" {% if url_linktext == "Login"%}disabled{%endif%}></div>
-      			<a href="{{ url|safe }}">{{ url_linktext }}</a>
-    		</form>
 
 		</div>
 

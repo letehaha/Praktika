@@ -230,5 +230,4 @@ section .comments:hover{
     opacity: 1;
 }
 
-textarea { resize: vertical; 
-}
+textarea { resize: vertical; }

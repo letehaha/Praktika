@@ -14,7 +14,9 @@ menu, nav, output, ruby, section, summary, time, mark, audio, video, main {
     font-family: 'Lato', sans-serif;
 }
 html,body {overflow-y:hidden}
-button:active, button:focus {
+button:active, button:focus, 
+input:active, input:focus,
+textarea:active, textarea:focus{
   outline: none;
 }
 body{
@@ -36,28 +38,41 @@ a{
 }
 
 /*------------  BUTTONS  -------------*/
-
 header .h-search{
-	width: 40%;
-	height: 100%;
-	display: block;
-	float: right;
+    width: 40%;
+    height: 100%;
+    display: block;
+    float: right;
     position: relative;
 }
 header .h-search::after{
-	content: " ";
-  	clear: both;
-  	display: table;
+    content: " ";
+    clear: both;
+    display: table;
 }
-
+header button {
+    width: 100%;
+    padding: 20px 10px 20px 10px;
+    font-size: 25px;
+    border: none;
+    background-color: #7A7474;
+    opacity: 0.3;
+    color: white;
+    -webkit-transition: all 0.5s linear 0s;
+    -moz-transition: all 0.5s linear 0s;
+    -o-transition: all 0.5s linear 0s;
+    transition: all 0.5s linear 0s;
+}
+header button:hover{opacity: 1;}
 header .random-button, .search-button{
-	width: 50%;
-	display: block;
-	text-align: center;
+    width: 50%;
+    display: block;
+    text-align: center;
 }
 header .random-button{
 	float: left;
     border-right: solid 2px black;
+    position: relative;
 }
 header .search-button{
 	float: right;
@@ -66,17 +81,26 @@ header .search-button{
 header button i{
     padding-left: 30px;
 }
-header button {
-	width: 100%;
-	padding: 20px 10px 20px 10px;
-	font-size: 25px;
-	border: none;
-	background-color: #7A7474;
-	opacity: 0.3;
-	color: white;
+header button form.hidden-form{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #7A7474;
+    display: none;
 }
-header button:hover{opacity: 1;}
-
+header button.search-button:hover form{
+    display: block;
+}
+header input{
+    padding: 20px;
+    background-color: #7A7474;
+    opacity: 0.7;
+    border: none;
+    font-size: 1em;
+    color: white;
+}
 /*-------------------------*/
 
 main{
@@ -224,10 +248,37 @@ section .comments{
     margin-top: 50px;
     opacity: 0.3;
     color: white;
+
+    -webkit-transition: all 0.5s linear 0s;
+    -moz-transition: all 0.5s linear 0s;
+    -o-transition: all 0.5s linear 0s;
+    transition: all 0.5s linear 0s;
 }
 
 section .comments:hover{
-    opacity: 1;
+    opacity: 0.8;
 }
 
-textarea { resize: vertical; }
+section form textarea { 
+    resize: vertical;
+    padding: 5px 0 5px 5px;
+    background-color: #7A7474;
+    color: white;
+}
+section form input{
+    padding: 10px;
+    background-color: #A49C9C;
+    border: none;
+    float: left;
+    display: inline-block;
+    color: white;
+}
+section form input:hover{
+    background-color:#BFBABA;
+}
+section form .link-login{
+    padding: 5px;
+}
+section form .link-login a{
+    margin-left: 80px;
+}

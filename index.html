@@ -12,11 +12,11 @@
 	<header>
 		<div class="h-search">
 			<button class="random-button">Случайный фильм</button>
-			<button class="search-button">
-				<form>Поиск фильма:
-      				<input value="Звездные войны: Эпизод 7 – Пробуждение силы (2015)" name="guestbook_name">
-      				<!--<input type="submit" value="switch">-->
-    			</form>
+			<button class="search-button">Поиск фильма
+				<form class="hidden-form">
+      		<input value="Звездные войны: Эпизод 7 – Пробуждение силы (2015)" name="guestbook_name" size="13">
+      		<!--<input type="submit" value="switch">-->
+    		</form>
 			</button>
 		</div>
 	</header>
@@ -65,23 +65,25 @@
       				<textarea name="content" rows="1" cols="73" {% if url_linktext == "Login"%}placeholder="Войдите через свою учетную запись что бы отправиль сообщение!!!"{% else %}placeholder="Поделитесь своим мнением с другими"{%endif%} {% if url_linktext == "Login"%}disabled{%endif%}></textarea>
       				</div>
       			<div>
-      			<input type="submit" value="Отправить сообщение" {% if url_linktext == "Login"%}disabled{%endif%}></div>
-      			<a href="{{ url|safe }}">{{ url_linktext }}</a>
+      			<input type="submit" value="Отправить" {% if url_linktext == "Login"%}disabled{%endif%}></div>
+            <div class="link-login">
+      			<a href="{{ url|safe }}">{{ url_linktext }}</a></div>
     		</form>
-
-    		{% for greeting in greetings %}
-      			{% if greeting.author %}
-        			<b>{{ greeting.author.email }}
-          				{% if user and user.user_id() == greeting.author.identity %}
+        <hr>
+        <div>
+    		  {% for greeting in greetings %}
+      			 {% if greeting.author %}
+        			 <b>{{ greeting.author.email }}
+          		  		{% if user and user.user_id() == greeting.author.identity %}
             				(You)
           				{% endif %}
-        			</b> wrote:
-      			{% else %}
-       				Анонимный пользователь написал:
-      			{% endif %}
+        		  	</b> wrote:
+      		  	{% else %}
+       		   		Анонимный пользователь написал:
+      		  	{% endif %}
       			<blockquote>{{ greeting.content }}</blockquote>
-    		{% endfor %}
-
+    		  {% endfor %}
+        </div>
 		</div>
 
 	</section>
